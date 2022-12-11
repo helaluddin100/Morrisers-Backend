@@ -18,3 +18,4 @@ use App\Http\Controllers\SpinnerController;
 
 //FRONTEND API ROUTES
 Route::post('spinner', [SpinnerController::class, 'store']);
+Route::get('spinner/get', [SpinnerController::class, 'TotalSpinners']);

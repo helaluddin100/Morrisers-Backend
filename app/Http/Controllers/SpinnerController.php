@@ -15,11 +15,15 @@ class SpinnerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function index()
-    // {
-    //     $spinners = Spinner::orderBy("id", "desc")->get();
-    //     return view('spinner.index', compact('spinners'));
-    // }
+    public function TotalSpinners()
+    {
+        $spinners = Spinner::sum('get_offer');
+        return response()->json([
+            'status' => 200,
+            'message' => 'Total spinners',
+            'data' => $spinners
+        ]);
+    }
 
     /**
      * Show the form for creating a new resource.
