@@ -17,16 +17,15 @@ class CreateVisitorsTable extends Migration
             $table->id();
             $table->string('country')->nullable();
             $table->string('ip')->nullable();
-            $table->string('network')->nullable();
+            $table->string('os')->nullable();
+            $table->string('os_version')->nullable();
             $table->string('city')->nullable();
             $table->string('region')->nullable();
-            $table->string('country_name')->nullable();
             $table->string('country_code')->nullable();
-            $table->string('country_capital')->nullable();
-            $table->string('postal')->nullable();
             $table->string('latitude')->nullable();
-            $table->string('longitude')->nullable();
-            $table->string('currency')->nullable();
+            $table->string('languages')->nullable();
+            $table->string('browser')->nullable();
+            $table->string('browser_version')->nullable();
             $table->timestamps();
         });
     }

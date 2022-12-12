@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Spinner;
 use App\Http\Controllers\SpinnerController;
+use App\Http\Controllers\VisitorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,4 @@ use App\Http\Controllers\SpinnerController;
 //FRONTEND API ROUTES
 Route::post('spinner', [SpinnerController::class, 'store']);
 Route::get('spinner/get', [SpinnerController::class, 'TotalSpinners']);
+Route::post('visitors', [VisitorController::class, 'store']);

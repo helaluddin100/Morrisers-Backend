@@ -35,7 +35,24 @@ class VisitorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //input validation
+        $visitor = new Visitor;
+        $visitor-> country          = $request->input('country');
+        $visitor-> ip               = $request->input('ip');
+        $visitor-> os               = $request->input('os');
+        $visitor-> os_version       = $request->input('os_version');
+        $visitor-> city             = $request->input('city');
+        $visitor-> region           = $request->input('region');
+        $visitor-> country_code     = $request->input('country_code');
+        $visitor-> latitude         = $request->input('latitude');
+        // $visitor-> languages        = $request->input('languages');
+        $visitor-> browser          = $request->input('browser');
+        $visitor-> browser_version  = $request->input('browser_version');
+        $visitor-> save();
+        return response()->json([
+        'status' => 200,
+        'message' => 'Visitor added successfully',
+        ]);
     }
 
     /**
